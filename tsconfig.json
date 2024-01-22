@@ -1,5 +1,5 @@
 {
-	"include": ["src"],
+	"include": ["src", "src/Api/fetchDataCountry.tsx"],
 	"compilerOptions": {
 		"baseUrl": "src",
 		"jsx": "react-jsx"
