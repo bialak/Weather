@@ -1,0 +1,45 @@
+.weatherCard {
+	flex-direction: row;
+	display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 15px;
+	column-gap: 10px;
+	text-align: center;
+	font-size: 0.9em;
+	margin: 20px;
+	margin-top: 6%;
+	color: white;
+	width: 15%;
+	height: 30%;
+	border-radius: 10%;
+	box-shadow: 3px 16px 24px 13px rgba(66, 68, 90, 1);
+	overflow: hidden;
+	background-color: rgb(136, 181, 206);
+}
+
+.country {
+	text-transform: uppercase;
+	font-size: 1.7em;
+	margin-top: 4%;
+	width: 100%;
+}
+
+.text {
+	font-family: cursive;
+	text-transform: lowercase;
+	font-size: 1.6em;
+	flex-grow: 1;
+}
+
+.temperature {
+	text-align: left;
+	margin: 10px 10px;
+	font-size: 2.5em;
+}
+
+.wind {
+	font-family: cursive;
+	margin-bottom: 4%;
+}
