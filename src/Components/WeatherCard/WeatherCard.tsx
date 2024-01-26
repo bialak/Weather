@@ -1,6 +1,5 @@
 import { getCityWeather } from "Api/fetchDataCountry";
-import { useEffect, useState } from "react";
-import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import "./WeatherCard.css";
 
 type WeatherCardProps = {
@@ -25,7 +24,6 @@ const WeatherCard = ({ city }: WeatherCardProps) => {
 		return <span>Error: {error.message}</span>;
 	}
 
-	console.log(data);
 	return (
 		<div className="weatherCard">
 			<h1 className="country">{data.location.country}</h1>
@@ -37,13 +35,5 @@ const WeatherCard = ({ city }: WeatherCardProps) => {
 		</div>
 	);
 };
-
-// <WeatherCard
-// 	country={countryWeather.country}
-// 	capital={countryWeather.name}
-// 	degrees={countryWeather.current.temp_c}
-// 	wind={countryWeather.current.wind_kph}
-// 	image={countryWeather.current.confition.icon}
-// />;
 
 export default WeatherCard;
