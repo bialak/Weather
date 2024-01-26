@@ -1,11 +1,9 @@
 .weatherCard {
 	flex-direction: row;
 	display: flex;
-	align-content: space-between;
 	flex-wrap: wrap;
 	justify-content: center;
-	row-gap: 15px;
-	column-gap: 10px;
+	column-gap: 100%;
 	text-align: center;
 	font-size: 0.9em;
 	margin: 20px;
@@ -24,13 +22,13 @@
 	font-size: 1.7em;
 	margin-top: 4%;
 	width: 100%;
+	flex-grow: 10;
 }
 
 .text {
 	font-family: cursive;
 	text-transform: lowercase;
 	font-size: 1.6em;
-	flex-grow: 1;
 }
 
 .temperature {
