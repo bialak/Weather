@@ -9,9 +9,6 @@ const getUrl = (city: string) => {
 	});
 	return `${baseUrl}/${endpointPath}?${searchParams.toString()}`;
 };
-// const cities = ["London", "Warsaw", "Berlin", "Prague", "Madrid", "Rome", "Mexico", "Sydney"];
-// const allUrlsOfCities = cities.map((city) => (city = getUrl(city)));
-
 const fetchDataCountry = async (url) => {
 	const response = await fetch(url);
 	return response.json();
