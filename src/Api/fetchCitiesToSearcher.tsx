@@ -5,7 +5,7 @@ const fetchDataCity = async (url) => {
 			"Content-Type": "application/json",
 		},
 	});
-	return response.json();
+	return response.json() as Promise<CountryData[]>;
 };
 
 const baseUrlCity = "https://api.api-ninjas.com/v1/city";
