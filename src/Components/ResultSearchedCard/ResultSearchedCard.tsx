@@ -1,4 +1,4 @@
-import { getCityWeather } from "Api/fetchDataCountry";
+import { getCityWeather } from "Api/getCityWeather";
 import { useQuery } from "@tanstack/react-query";
 import "./ResultSearchedCard.css";
 
@@ -23,10 +23,14 @@ const ResultSearchedCard = ({ city }: ResultSearchedCardProps) => {
 	return (
 		<>
 			<div className="resultSearchedCard">
-				<h1 className="country">{data.location.country}</h1>
+				<h1 className="country" data-testid="resultCountry">
+					{data.location.country}
+				</h1>
 				<h2 className="city"> {city}</h2>
 				<h2 className="text">{data.current.condition.text}</h2>
-				<h1 className="temperature"> {data.current.temp_c} °C</h1>
+				<h1 className="temperature" data-testid={"resultTemperature"}>
+					{data.current.temp_c} °C
+				</h1>
 				<img src={data.current.condition.icon} alt="" className="picture" />
 				<h2 className="wind">wind: {data.current.wind_kph} kph</h2>
 			</div>
