@@ -65,12 +65,16 @@ const Search = ({ onSearchClick }: SearchProps) => {
 					placeholder={"Search..."}
 					value={searchText}
 				/>
-				<button className="searchButton">Search</button>
+				<button className="searchButton" disabled={isLoading}>
+					Search
+				</button>
 			</form>
 			{visible && (
 				<ul className="searchPropositionList">
 					{searchResult?.map((result) => (
 						<li
+							key={tabIndexValue}
+							data-testid={`searchProposition-${tabIndexValue}`}
 							className="searchProposition"
 							tabIndex={tabIndexValue++}
 							onClick={() => handleClick(result.name)}
