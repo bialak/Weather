@@ -1,14 +1,14 @@
 import WeatherCard from "Components/WeatherCard/WeatherCard";
 import "./WeatherCardsList.css";
+import { cities } from "citiesmock.js";
 
 const WeatherCardsList = () => {
-	const cities = ["London", "Warsaw", "Berlin", "Prague", "Madrid", "Rome", "Mexico", "Sydney"];
-
+	console.log(cities);
 	return (
 		<>
 			<div className="weatherCardsList">
 				{cities.map((city) => (
-					<WeatherCard city={city} />
+					<WeatherCard city={city} key={city} />
 				))}
 			</div>
 		</>
