@@ -1,6 +1,6 @@
 import WeatherCard from "Components/WeatherCard/WeatherCard";
 import "./WeatherCardsList.css";
-import { cities } from "citiesmock.js";
+import { cities } from "citiesToFetchData.js";
 
 const WeatherCardsList = () => {
 	console.log(cities);

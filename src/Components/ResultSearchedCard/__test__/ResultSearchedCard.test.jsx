@@ -1,10 +1,10 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import App from "../../../App";
-import { cities } from "citiesmock.js";
+import { cities } from "citiesToFetchData.js";
 const nock = require("nock");
 
 window.alert = jest.fn();
-jest.mock("citiesmock.js", () => ({
+jest.mock("citiesToFetchData.js", () => ({
 	cities: ["Paris"],
 }));
 

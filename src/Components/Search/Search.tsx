@@ -11,7 +11,7 @@ type SearchProps = {
 
 const Search = ({ onSearchClick }: SearchProps) => {
 	const [searchText, setSearchText] = useState("");
-	const [visible, setVisible] = useState(true);
+	const [visibleSearchPropositionList, setVisibleSearchPropositionList] = useState(true);
 
 	const { isLoading, data } = useQuery({
 		queryKey: ["city-weather", searchText],
@@ -40,7 +40,7 @@ const Search = ({ onSearchClick }: SearchProps) => {
 
 	function handleDebounceFn(e) {
 		setSearchText(e.target.value);
-		setVisible(true);
+		setVisibleSearchPropositionList(true);
 	}
 
 	function handleChange(e) {
@@ -49,7 +49,7 @@ const Search = ({ onSearchClick }: SearchProps) => {
 	}
 
 	function handleClick(clickedCity: string) {
-		setVisible(false);
+		setVisibleSearchPropositionList(false);
 		setSearchText(clickedCity);
 	}
 
@@ -69,7 +69,7 @@ const Search = ({ onSearchClick }: SearchProps) => {
 					Search
 				</button>
 			</form>
-			{visible && (
+			{visibleSearchPropositionList && (
 				<ul className="searchPropositionList">
 					{searchResult?.map((result) => (
 						<li
