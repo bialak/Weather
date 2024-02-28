@@ -13,7 +13,7 @@ const ResultSearchedCard = ({ city }: ResultSearchedCardProps) => {
 	});
 
 	if (isPending) {
-		return <span>Loading...</span>;
+		return <span>Loading..</span>;
 	}
 
 	if (isError) {
