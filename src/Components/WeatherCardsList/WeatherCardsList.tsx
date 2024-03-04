@@ -3,7 +3,6 @@ import "./WeatherCardsList.css";
 import { cities } from "citiesToFetchData.js";
 
 const WeatherCardsList = () => {
-	console.log(cities);
 	return (
 		<>
 			<div className="weatherCardsList">
