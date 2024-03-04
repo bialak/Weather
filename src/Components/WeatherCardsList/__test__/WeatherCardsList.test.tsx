@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from "test/setup";
 import WeatherCardsList from "../WeatherCardsList";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 describe("WeatherCardLists", () => {
 	it("should show cities from array in component WeatherCard", async () => {
