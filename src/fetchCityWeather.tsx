@@ -3,7 +3,7 @@ const endpointPath = "v1/current.json";
 
 const getUrl = (city: string) => {
 	const searchParams = new URLSearchParams({
-		key: "c6068278a47d4030aad124640241101",
+		key: process.env.REACT_APP_WEATHER_API_KEY,
 		q: city,
 		aqi: "no",
 	});
@@ -12,7 +12,7 @@ const getUrl = (city: string) => {
 
 const fetchDataCountry = async (url) => {
 	const response = await fetch(url);
-	return response.json() as Promise<WeatherData>;
+	return response.json() as Promise<Weather>;
 };
 
-export const getCityWeather = (city: string) => fetchDataCountry(getUrl(city));
+export const fetchCityWeather = (city: string) => fetchDataCountry(getUrl(city));
