@@ -17,8 +17,7 @@ function App() {
 		<div className="App">
 			<QueryClientProvider client={queryClient}>
 				<Search onSearchClick={handleSearchClick} />
-				{city && <ResultSearchedCard city={city} />}
-				{!city && <WeatherCardsList />}
+				{city ? <ResultSearchedCard city={city} /> : <WeatherCardsList />}
 			</QueryClientProvider>
 		</div>
 	);
