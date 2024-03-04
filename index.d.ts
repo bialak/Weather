@@ -1,4 +1,4 @@
-interface WeatherData {
+interface Weather {
 	current: {
 		condition: {
 			text: string;
@@ -13,7 +13,7 @@ interface WeatherData {
 	};
 }
 
-interface CountryData {
+interface Country {
 	name: string;
 	latitiude: number;
 }
