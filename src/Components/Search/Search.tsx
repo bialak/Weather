@@ -1,6 +1,6 @@
 import "./Search.css";
-import { fetchCitiesToSearcher } from "Api/fetchCitiesToSearcher";
-import { useCallback, useState, useEffect } from "react";
+import { fetchCities } from "fetchCities";
+import { useCallback, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 
 const debounce = require("lodash.debounce");
@@ -15,7 +15,7 @@ const Search = ({ onSearchClick }: SearchProps) => {
 
 	const { isLoading, data } = useQuery({
 		queryKey: ["city-weather", searchText],
-		queryFn: () => fetchCitiesToSearcher(searchText),
+		queryFn: () => fetchCities(searchText),
 		enabled: Boolean(searchText),
 	});
 
@@ -31,9 +31,8 @@ const Search = ({ onSearchClick }: SearchProps) => {
 		if (listSearchedResults.includes(searchText)) {
 			onSearchClick(searchText);
 			return;
-		} else {
-			alert("Write correct city");
 		}
+		alert("Write correct city");
 	}
 
 	const debounceFn = useCallback(debounce(handleDebounceFn, 500), []);

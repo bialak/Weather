@@ -1,4 +1,4 @@
-import { getCityWeather } from "Api/getCityWeather";
+import { fetchCityWeather } from "fetchCityWeather";
 import { useQuery } from "@tanstack/react-query";
 import "./ResultSearchedCard.css";
 
@@ -9,7 +9,7 @@ type ResultSearchedCardProps = {
 const ResultSearchedCard = ({ city }: ResultSearchedCardProps) => {
 	const { isPending, isError, data, error } = useQuery({
 		queryKey: ["weatherResult", city],
-		queryFn: () => getCityWeather(city),
+		queryFn: () => fetchCityWeather(city),
 	});
 
 	if (isPending) {
@@ -23,16 +23,20 @@ const ResultSearchedCard = ({ city }: ResultSearchedCardProps) => {
 	return (
 		<>
 			<div className="resultSearchedCard">
-				<h1 className="country" data-testid="resultCountry">
+				<span className="country" data-testid="resultCountry">
 					{data.location.country}
-				</h1>
-				<h2 className="city"> {city}</h2>
-				<h2 className="text">{data.current.condition.text}</h2>
-				<h1 className="temperature" data-testid={"resultTemperature"}>
+				</span>
+				<span className="city"> {city}</span>
+				<span className="text">{data.current.condition.text}</span>
+				<span className="temperature" data-testid={"resultTemperature"}>
 					{data.current.temp_c} °C
-				</h1>
-				<img src={data.current.condition.icon} alt="" className="picture" />
-				<h2 className="wind">wind: {data.current.wind_kph} kph</h2>
+				</span>
+				<img
+					src={data.current.condition.icon}
+					alt={`${data.current.condition.text} weather image`}
+					className="picture"
+				/>
+				<span className="wind">wind: {data.current.wind_kph} kph</span>
 			</div>
 		</>
 	);
