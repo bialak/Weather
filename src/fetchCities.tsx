@@ -1,4 +1,5 @@
-const fetchCity = async (url) => {
+export const fetchCities = async (city: string) => {
+	const url = getUrlOfCity(city);
 	const response = await fetch(url, {
 		headers: {
 			"X-Api-Key": process.env.REACT_APP_NINJA_API_KEY,
@@ -17,5 +18,3 @@ const getUrlOfCity = (city: string) => {
 	});
 	return `${baseUrlCity}?${searchParams.toString()}`;
 };
-
-export const fetchCities = (city: string) => fetchCity(getUrlOfCity(city));

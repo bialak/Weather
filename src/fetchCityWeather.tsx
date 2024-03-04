@@ -10,9 +10,8 @@ const getUrl = (city: string) => {
 	return `${baseUrl}/${endpointPath}?${searchParams.toString()}`;
 };
 
-const fetchDataCountry = async (url) => {
+export const fetchCityWeather = async (city: string) => {
+	const url = getUrl(city);
 	const response = await fetch(url);
 	return response.json() as Promise<Weather>;
 };
-
-export const fetchCityWeather = (city: string) => fetchDataCountry(getUrl(city));
