@@ -2,6 +2,7 @@ import "./Search.css";
 import { fetchCities } from "fetchCities";
 import { useCallback, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import SearchPropositionList from "Components/SearchPropositionList/SearchPropositionList";
 
 const debounce = require("lodash.debounce");
 
@@ -47,12 +48,11 @@ const Search = ({ onSearchClick }: SearchProps) => {
 		debounceFn(e);
 	}
 
-	function handleClick(clickedCity: string) {
+	function handleClick(city: City) {
 		setVisibleSearchPropositionList(false);
-		setSearchText(clickedCity);
+		setSearchText(city.name);
 	}
 
-	let tabIndexValue = 0;
 	return (
 		<>
 			<h1 className="header">What the weather is like in your country </h1>
@@ -69,19 +69,7 @@ const Search = ({ onSearchClick }: SearchProps) => {
 				</button>
 			</form>
 			{visibleSearchPropositionList && (
-				<ul className="searchPropositionList">
-					{searchResult?.map((result) => (
-						<li
-							key={tabIndexValue}
-							data-testid={`searchProposition-${tabIndexValue}`}
-							className="searchProposition"
-							tabIndex={tabIndexValue++}
-							onClick={() => handleClick(result.name)}
-						>
-							{result.name}
-						</li>
-					))}
-				</ul>
+				<SearchPropositionList onCitySelection={handleClick} inputvalue={searchText} />
 			)}
 		</>
 	);
