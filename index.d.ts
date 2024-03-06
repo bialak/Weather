@@ -1,19 +1,23 @@
 interface Weather {
-	current: {
-		condition: {
-			text: string;
-			icon: string;
-		};
-		temp_c: number;
-		wind_kph: number;
-	};
-	location: {
-		country: string;
-		name: string;
-	};
+	current: CurrentWeather;
+	location: WeatherLocation;
 }
 
-interface Country {
+interface WeatherLocation {
+	country: string;
+	name: string;
+}
+
+interface CurrentWeather {
+	condition: {
+		text: string;
+		icon: string;
+	};
+	temp_c: number;
+	wind_kph: number;
+}
+
+interface City {
 	name: string;
 	latitiude: number;
 }

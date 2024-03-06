@@ -1,6 +1,6 @@
 const nock = require("nock");
 
-export const defaultMockedCityWeatherPayload = Object.freeze({
+export const defaultMockedCityWeatherPayload: Weather = Object.freeze({
 	current: {
 		condition: {
 			text: "Sunny",

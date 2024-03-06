@@ -6,7 +6,7 @@ export const fetchCities = async (city: string) => {
 			"Content-Type": "application/json",
 		},
 	});
-	return response.json() as Promise<Country[]>;
+	return response.json() as Promise<City[]>;
 };
 
 const baseUrlCity = "https://api.api-ninjas.com/v1/city";
