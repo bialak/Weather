@@ -1,0 +1,23 @@
+.searchPropositionList {
+	position: fixed;
+	background-color: white;
+	left: calc(50% - 15% - 56px);
+	list-style: none;
+	width: 30%;
+	color: gray;
+	font-weight: bold;
+	flex-direction: column;
+	min-width: 200px;
+	display: block;
+}
+
+.searchProposition {
+	padding: 7px 2px;
+	cursor: pointer;
+	margin: 4px;
+}
+
+.searchProposition:hover {
+	background-color: rgb(247, 242, 242);
+	color: rgb(39, 161, 177);
+}
