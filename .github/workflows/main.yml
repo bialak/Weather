@@ -20,8 +20,8 @@ jobs:
         npm install
         npm run-script build
       env:
-       REACT_APP_NINJA_API_KEY : ${{ secrets.REACT_APP_NINJA_API_KEY  }}
-        REACT_APP_WEATHER_API_KEY: ${{ secrets.REACT_APP_WEATHER_API_KEY}}
+       REACT_APP_NINJA_API_KEY: ${{ secrets.REACT_APP_NINJA_API_KEY }}
+       REACT_APP_WEATHER_API_KEY: ${{ secrets.REACT_APP_WEATHER_API_KEY }}
 
     - name: Deploy
       uses: bialak/github-pages-deploy-action@releases/v3
