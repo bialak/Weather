@@ -37,9 +37,9 @@ The project weather is weather forecast . You can check actual weather in your c
 
 4. Get a second free API Key at  https://www.weatherapi.com/signup.aspx. You need to sing up and you will have your key in  DASHBOAR > Api.
 
-5. Add keys to file .env.example.
+5. Add keys to file `.env.example`.
 
-6. Change name of file .env.example to ".env" .
+6. Change name of file `.env.example` to `.env` .
 
 7. Write in the terminal:
     ```sh
