@@ -1,4 +1,3 @@
-<img width="1393" alt="Screenshot 2024-10-23 at 20 47 23" src="https://github.com/user-attachments/assets/a4d1ce67-b981-45f6-88e2-a1b04a5802d0"><h3 align="center">weather</h3>
 
   <p align="center">
      The project weather is weather forecast.
