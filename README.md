@@ -35,7 +35,7 @@ The project weather is weather forecast . You can check actual weather in your c
 
 3. Get a first free API Key at https://api-ninjas.com/register. You need to sing up and you will have your key in Api Statistics tab.
 
-4.Get a second free API Key at  https://www.weatherapi.com/signup.aspx. You need to sing up and you will have your key in  DASHBOAR > Api.
+4. Get a second free API Key at  https://www.weatherapi.com/signup.aspx. You need to sing up and you will have your key in  DASHBOAR > Api.
 
 5. Add keys to file .env.example.
 
