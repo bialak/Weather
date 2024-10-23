@@ -2,7 +2,7 @@
   <p align="center">
      The project weather is weather forecast.
     <br />
-    <a href="https://bialak.github.io/weather/">View Page</a>
+    <a href="https://bialak.github.io/weather/">View Demo</a>
     ·
     <a href="https://github.com/bialak/weather/issues/new">Report Bug</a>
   </p>
